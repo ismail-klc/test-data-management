@@ -1,0 +1,26 @@
+<div class="container">
+  <app-navbar title="Test Detail"></app-navbar>
+
+  <mat-tab-group mat-align-tabs="center">
+    <mat-tab label="Main"> 
+      <app-test-main></app-test-main>
+    </mat-tab>
+
+    <mat-tab label="Sound1"> 
+      <app-test-sound [sound]="'sound1'"></app-test-sound>
+    </mat-tab>
+
+    <mat-tab label="Sound2"> 
+      <app-test-sound [sound]="'sound2'"></app-test-sound>
+    </mat-tab>
+
+    <mat-tab label="Vibration1"> 
+       <app-test-vibration [vibration]="'vibration1'"></app-test-vibration>
+    </mat-tab>
+
+    <mat-tab label="Vibration2">
+      <app-test-vibration [vibration]="'vibration2'"></app-test-vibration>
+    </mat-tab>
+
+  </mat-tab-group>
+</div>

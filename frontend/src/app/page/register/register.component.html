@@ -1,0 +1,73 @@
+<div class="background"></div>
+<div class="container">
+  <div class="container">
+    <div class="row">
+      <app-header></app-header>
+    </div>
+
+   <div class="row">
+     <div class="col-md-4 col-sm-6 col-md-offset-4 col-sm-offset-3">
+       <div class="card">
+
+         <div class="card-header">
+            <h4>Register</h4>
+         </div>
+ 
+       <form [formGroup]="registerForm" (ngSubmit)="registerBtn()">
+
+         <div class="card-form">
+
+          <div class="form-row">
+             <i class="material-icons">account_box</i>
+
+             <mat-form-field color="warn">
+               <input type="text" matInput placeholder="Your name" formControlName="firstName"/>
+             </mat-form-field>
+           </div>
+
+           <div class="form-row">
+             <i class="material-icons">account_circle</i>
+
+             <mat-form-field color="warn">
+               <input type="text" matInput placeholder="Your surname" formControlName="lastName" />
+             </mat-form-field>
+           </div>
+
+           <div class="form-row">
+             <i class="material-icons">email</i>
+
+             <mat-form-field color="warn">
+               <input type="text" matInput placeholder="Email address" formControlName="email" />
+             </mat-form-field>
+
+           </div>
+
+           <div class="form-row">
+             <i class="material-icons">lock_outline</i>
+
+             <mat-form-field color="warn">
+               <input type="password" matInput placeholder="Password" formControlName="password" />
+             </mat-form-field>
+            </div>
+
+            <div class="form-row">
+             <i class="material-icons">check</i>
+            <mat-form-field color="warn">
+               <input type="password" matInput placeholder="Confirm Password" formControlName="confirmPassword" />
+             </mat-form-field>
+             </div>
+
+           </div>
+            <div class="card-footer">
+              <button mat-button [disabled]="!registerForm.valid">LET'S STARTED</button>
+            </div>
+           <h6>{{registerForm.value|json}}</h6>
+            <h6>{{registerForm.status|json}}</h6>
+          </form>
+
+       </div>
+     </div>
+   </div>
+
+  </div>
+</div>

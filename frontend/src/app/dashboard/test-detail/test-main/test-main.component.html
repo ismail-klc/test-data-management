@@ -1,0 +1,15 @@
+<button mat-raised-button color="primary" style="margin-top:40px" (click)="hideAll()">Hide All</button>
+<div class="flex" style="margin-top:10px">
+  <div class="flex-item">
+    <div style="display: block;">
+    <canvas baseChart height="125"
+                [datasets]="lineChartData"
+                [labels]="lineChartLabels"
+                [options]="lineChartOptions"
+                [colors]="lineChartColors"
+                [legend]="lineChartLegend"
+                [chartType]="lineChartType">
+      </canvas>
+    </div>
+  </div>
+</div> 
